@@ -1,0 +1,936 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{525ABFFD-568C-44F6-8DD7-87ECC2BAC6E8}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PTSCOATING</RootNamespace>
+    <AssemblyName>PTSCOATING</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\..\BarCodeAbudhabi\bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="DataSetToExcel">
+      <HintPath>..\..\..\LegalCaseNew\Legalcase\bin\DataSetToExcel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\BarCodeAbudhabi\bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp">
+      <HintPath>..\..\BarCodeAbudhabi\bin\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\brand.png" />
+    <Content Include="assets\calendar-hrd.png" />
+    <Content Include="assets\Jindal_Logo.jpg" />
+    <Content Include="assets\logout.png" />
+    <Content Include="assets\menu.png" />
+    <Content Include="assets\user.png" />
+    <Content Include="bin\AjaxControlToolkit.dll" />
+    <Content Include="bin\DataSetToExcel.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\PTSCOATING.dll" />
+    <Content Include="bin\RestSharp.dll" />
+    <Content Include="ChangePasswords.aspx" />
+    <Content Include="css\login\animate.css" />
+    <Content Include="css\login\animsition.min.css" />
+    <Content Include="css\login\bootstrap.min.css" />
+    <Content Include="css\login\daterangepicker.css" />
+    <Content Include="css\login\font-awesome.min.css" />
+    <Content Include="css\login\hamburgers.min.css" />
+    <Content Include="css\login\icon-font.min.css" />
+    <Content Include="css\login\main.css" />
+    <Content Include="css\login\select2.min.css" />
+    <Content Include="css\login\util.css" />
+    <Content Include="css\usercss\css\dynamic.css" />
+    <Content Include="css\usercss\css\main.css" />
+    <Content Include="css\usercss\images\banner.jpg" />
+    <Content Include="css\usercss\js\bootstrap.min.js" />
+    <Content Include="css\usercss\js\jquery-3.3.1.min.js" />
+    <Content Include="css\usercss\js\main.js" />
+    <Content Include="css\usercss\js\plugins\bootstrap-datepicker.min.js" />
+    <Content Include="css\usercss\js\plugins\bootstrap-notify.min.js" />
+    <Content Include="css\usercss\js\plugins\chart.js" />
+    <Content Include="css\usercss\js\plugins\dataTables.bootstrap.min.js" />
+    <Content Include="css\usercss\js\plugins\dropzone.js" />
+    <Content Include="css\usercss\js\plugins\fullcalendar.min.js" />
+    <Content Include="css\usercss\js\plugins\jquery-ui.custom.min.js" />
+    <Content Include="css\usercss\js\plugins\jquery.dataTables.min.js" />
+    <Content Include="css\usercss\js\plugins\jquery.vmap.min.js" />
+    <Content Include="css\usercss\js\plugins\jquery.vmap.sampledata.js" />
+    <Content Include="css\usercss\js\plugins\jquery.vmap.world.js" />
+    <Content Include="css\usercss\js\plugins\moment.min.js" />
+    <Content Include="css\usercss\js\plugins\pace.min.js" />
+    <Content Include="css\usercss\js\plugins\select2.min.js" />
+    <Content Include="css\usercss\js\plugins\sweetalert.min.js" />
+    <Content Include="css\usercss\js\popper.min.js" />
+    <Content Include="css\usercss\menu\ddaccordion.js" />
+    <Content Include="css\usercss\menu\jindal.js" />
+    <Content Include="css\usercss\menu\jquery.min.js" />
+    <Content Include="fancybox\blank.gif" />
+    <Content Include="fancybox\example\10_b.jpg" />
+    <Content Include="fancybox\example\10_s.jpg" />
+    <Content Include="fancybox\example\11_b.jpg" />
+    <Content Include="fancybox\example\11_s.jpg" />
+    <Content Include="fancybox\example\12_b.jpg" />
+    <Content Include="fancybox\example\12_s.jpg" />
+    <Content Include="fancybox\example\1_b.jpg" />
+    <Content Include="fancybox\example\1_s.jpg" />
+    <Content Include="fancybox\example\2_b.jpg" />
+    <Content Include="fancybox\example\2_s.jpg" />
+    <Content Include="fancybox\example\3_b.jpg" />
+    <Content Include="fancybox\example\3_s.jpg" />
+    <Content Include="fancybox\example\4_b.jpg" />
+    <Content Include="fancybox\example\4_s.jpg" />
+    <Content Include="fancybox\example\5_b.jpg" />
+    <Content Include="fancybox\example\5_s.jpg" />
+    <Content Include="fancybox\example\6_b.jpg" />
+    <Content Include="fancybox\example\6_s.jpg" />
+    <Content Include="fancybox\example\7_b.jpg" />
+    <Content Include="fancybox\example\7_s.jpg" />
+    <Content Include="fancybox\example\8_b.jpg" />
+    <Content Include="fancybox\example\8_s.jpg" />
+    <Content Include="fancybox\example\9_b.jpg" />
+    <Content Include="fancybox\example\9_s.jpg" />
+    <Content Include="fancybox\fancybox-x.png" />
+    <Content Include="fancybox\fancybox-y.png" />
+    <Content Include="fancybox\fancybox.png" />
+    <Content Include="fancybox\fancy_close.png" />
+    <Content Include="fancybox\fancy_loading.png" />
+    <Content Include="fancybox\fancy_nav_left.png" />
+    <Content Include="fancybox\fancy_nav_right.png" />
+    <Content Include="fancybox\fancy_shadow_e.png" />
+    <Content Include="fancybox\fancy_shadow_n.png" />
+    <Content Include="fancybox\fancy_shadow_ne.png" />
+    <Content Include="fancybox\fancy_shadow_nw.png" />
+    <Content Include="fancybox\fancy_shadow_s.png" />
+    <Content Include="fancybox\fancy_shadow_se.png" />
+    <Content Include="fancybox\fancy_shadow_sw.png" />
+    <Content Include="fancybox\fancy_shadow_w.png" />
+    <Content Include="fancybox\fancy_title_left.png" />
+    <Content Include="fancybox\fancy_title_main.png" />
+    <Content Include="fancybox\fancy_title_over.png" />
+    <Content Include="fancybox\fancy_title_right.png" />
+    <Content Include="fancybox\fan\fancy-common.js" />
+    <Content Include="fancybox\fan\jquery.fancybox.min.css" />
+    <Content Include="fancybox\fan\jquery.fancybox.min.js" />
+    <Content Include="fancybox\fan\jquery.min.js" />
+    <Content Include="fancybox\jquery-1.4.3.min.js" />
+    <Content Include="fancybox\jquery.easing-1.3.pack.js" />
+    <Content Include="fancybox\jquery.fancybox-1.3.4.css" />
+    <Content Include="fancybox\jquery.fancybox-1.3.4.js" />
+    <Content Include="fancybox\jquery.fancybox-1.3.4.pack.js" />
+    <Content Include="fancybox\jquery.fancybox.js" />
+    <Content Include="fancybox\jquery.mousewheel-3.0.4.pack.js" />
+    <Content Include="fancybox\style.css" />
+    <Content Include="home.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="logout.aspx" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\csc.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\csi.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.CodeAnalysis.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.CodeAnalysis.Scripting.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\System.AppContext.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\System.Collections.Immutable.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\System.Diagnostics.StackTrace.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\System.IO.FileSystem.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\System.Reflection.Metadata.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\vbc.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\VBCSCompiler.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\csc.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\csi.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.CodeAnalysis.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.CodeAnalysis.Scripting.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.Win32.Primitives.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.AppContext.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Collections.Immutable.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Console.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Diagnostics.DiagnosticSource.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Diagnostics.FileVersionInfo.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Diagnostics.StackTrace.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Globalization.Calendars.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.IO.Compression.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.IO.Compression.ZipFile.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.IO.FileSystem.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Net.Http.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Net.Sockets.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Reflection.Metadata.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Runtime.InteropServices.RuntimeInformation.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Security.Cryptography.Encoding.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Security.Cryptography.Primitives.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Text.Encoding.CodePages.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Threading.Tasks.Extensions.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.ValueTuple.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Xml.ReaderWriter.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Xml.XmlDocument.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Xml.XPath.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Xml.XPath.XDocument.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\vbc.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\VBCSCompiler.exe" />
+    <Content Include="pts\ACID\AcidScan.aspx" />
+    <Content Include="pts\ACID\minus.gif" />
+    <Content Include="pts\ACID\NewBatchList.aspx" />
+    <Content Include="pts\ACID\plus.gif" />
+    <Content Include="pts\ACID\TakePicture.aspx" />
+    <Content Include="pts\ACID\webcam.js" />
+    <Content Include="pts\BLASTING\BlastingScan.aspx" />
+    <Content Include="pts\BLASTING\minus.gif" />
+    <Content Include="pts\BLASTING\NewBatchList.aspx" />
+    <Content Include="pts\BLASTING\plus.gif" />
+    <Content Include="pts\BLASTING\TakePicture.aspx" />
+    <Content Include="pts\BLASTING\webcam.js" />
+    <Content Include="pts\CALIBRATION\CalibrationScan.aspx" />
+    <Content Include="pts\CALIBRATION\minus.gif" />
+    <Content Include="pts\CALIBRATION\NewBatchList.aspx" />
+    <Content Include="pts\CALIBRATION\plus.gif" />
+    <Content Include="pts\CALIBRATION\TakePicture.aspx" />
+    <Content Include="pts\CALIBRATION\webcam.js" />
+    <Content Include="pts\COATINGAPP\CoatingAppScan.aspx" />
+    <Content Include="pts\COATINGAPP\minus.gif" />
+    <Content Include="pts\COATINGAPP\NewBatchList.aspx" />
+    <Content Include="pts\COATINGAPP\plus.gif" />
+    <Content Include="pts\COATINGAPP\TakePicture.aspx" />
+    <Content Include="pts\COATINGAPP\webcam.js" />
+    <Content Include="pts\FINALINSPECTION\FinalScan.aspx" />
+    <Content Include="pts\FINALINSPECTION\Hold.aspx" />
+    <Content Include="pts\FINALINSPECTION\minus.gif" />
+    <Content Include="pts\FINALINSPECTION\NewBatchList.aspx" />
+    <Content Include="pts\FINALINSPECTION\ParkList\addparameters.aspx" />
+    <Content Include="pts\FINALINSPECTION\ParkList\GetBatch.aspx" />
+    <Content Include="pts\FINALINSPECTION\ParkList\homepage.aspx" />
+    <Content Include="pts\FINALINSPECTION\ParkList\ParkList.aspx" />
+    <Content Include="pts\FINALINSPECTION\ParkList\plus.gif" />
+    <Content Include="pts\FINALINSPECTION\ParkList\plus.png" />
+    <Content Include="pts\FINALINSPECTION\ParkList\Post.aspx" />
+    <Content Include="pts\FINALINSPECTION\plus.gif" />
+    <Content Include="pts\FINALINSPECTION\Print.aspx" />
+    <Content Include="pts\FINALINSPECTION\Saleorderbatch.aspx" />
+    <Content Include="pts\FINALINSPECTION\TakePicture.aspx" />
+    <Content Include="pts\FINALINSPECTION\webcam.js" />
+    <Content Include="pts\homepage.aspx" />
+    <Content Include="pts\INBOUND\InboundScan.aspx" />
+    <Content Include="pts\INBOUND\NewBatchList.aspx" />
+    <Content Include="pts\INBOUND\Saleorderbatch.aspx" />
+    <Content Include="pts\INBOUND\TakePicture.aspx" />
+    <Content Include="pts\INBOUND\webcam.js" />
+    <Content Include="pts\INDUCTIONENTRY\NewBatchList.aspx" />
+    <Content Include="pts\MECHANICALLOGBOOK\NewBatchList.aspx" />
+    <Content Include="pts\PLANTLOGBOOK\NewBatchList.aspx" />
+    <Content Include="pts\Release\MultipleRelease.aspx" />
+    <Content Include="pts\Release\NewBatchList.aspx" />
+    <Content Include="pts\Release\ReleaseScan.aspx" />
+    <Content Include="pts\RINGCUT\minus.gif" />
+    <Content Include="pts\RINGCUT\plus.gif" />
+    <Content Include="pts\RINGCUT\RingCut.aspx" />
+    <Content Include="pts\RINGCUT\webcam.js" />
+    <Content Include="pts\SOLUBLESALTCONTAMINATION\minus.gif" />
+    <Content Include="pts\SOLUBLESALTCONTAMINATION\NewBatchList.aspx" />
+    <Content Include="pts\SOLUBLESALTCONTAMINATION\plus.gif" />
+    <Content Include="pts\SOLUBLESALTCONTAMINATION\SolubleSaltContaminationScan.aspx" />
+    <Content Include="pts\SOLUBLESALTCONTAMINATION\TakePicture.aspx" />
+    <Content Include="pts\SOLUBLESALTCONTAMINATION\webcam.js" />
+    <Content Include="pts\STEALINSPECTION\minus.gif" />
+    <Content Include="pts\STEALINSPECTION\NewBatchList.aspx" />
+    <Content Include="pts\STEALINSPECTION\plus.gif" />
+    <Content Include="pts\STEALINSPECTION\StealInsScan.aspx" />
+    <Content Include="pts\STEALINSPECTION\TakePicture.aspx" />
+    <Content Include="pts\STEALINSPECTION\webcam.js" />
+    <Content Include="pts\STENCILVARIFICATION\NewBatchList.aspx" />
+    <Content Include="pts\STENCILVARIFICATION\StencilVarificationScan.aspx" />
+    <Content Include="pts\STRIPPING\minus.gif" />
+    <Content Include="pts\STRIPPING\NewBatchList.aspx" />
+    <Content Include="pts\STRIPPING\plus.gif" />
+    <Content Include="pts\STRIPPING\StrippingScan.aspx" />
+    <Content Include="pts\STRIPPING\TakePicture.aspx" />
+    <Content Include="pts\STRIPPING\webcam.js" />
+    <Content Include="SCAN_files\custom.css" />
+    <Content Include="SCAN_files\default.css" />
+    <Content Include="SCAN_files\highlight.js" />
+    <Content Include="SCAN_files\html5-qrcode.js" />
+    <Content Include="SCAN_files\html5-qrcode.png" />
+    <Content Include="SCAN_files\jquery.min.js" />
+    <Content Include="SCAN_files\json2.js" />
+    <Content Include="SCAN_files\main.css" />
+    <Content Include="SCAN_files\post18_image2.jpg" />
+    <Content Include="SCAN_files\post24_image1.jpeg" />
+    <Content Include="SCAN_files\scanapp-logo-removebg-preview.png" />
+    <Content Include="SCAN_files\sharebar.css" />
+    <Content Include="SCAN_files\utterances.htm" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChangePasswords.aspx.cs">
+      <DependentUpon>ChangePasswords.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangePasswords.aspx.designer.cs">
+      <DependentUpon>ChangePasswords.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="helperclass.cs" />
+    <Compile Include="home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="home.aspx.designer.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="pts\ACID\Acid.Master.cs">
+      <DependentUpon>Acid.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\ACID\Acid.Master.designer.cs">
+      <DependentUpon>Acid.Master</DependentUpon>
+    </Compile>
+    <Compile Include="pts\ACID\AcidScan.aspx.cs">
+      <DependentUpon>AcidScan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\ACID\AcidScan.aspx.designer.cs">
+      <DependentUpon>AcidScan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pts\ACID\NewBatchList.aspx.cs">
+      <DependentUpon>NewBatchList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\ACID\NewBatchList.aspx.designer.cs">
+      <DependentUpon>NewBatchList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pts\ACID\TakePicture.aspx.cs">
+      <DependentUpon>TakePicture.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\ACID\TakePicture.aspx.designer.cs">
+      <DependentUpon>TakePicture.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pts\BLASTING\BLASTING.Master.cs">
+      <DependentUpon>BLASTING.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\BLASTING\BLASTING.Master.designer.cs">
+      <DependentUpon>BLASTING.Master</DependentUpon>
+    </Compile>
+    <Compile Include="pts\BLASTING\BlastingScan.aspx.cs">
+      <DependentUpon>BlastingScan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\BLASTING\BlastingScan.aspx.designer.cs">
+      <DependentUpon>BlastingScan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pts\BLASTING\NewBatchList.aspx.cs">
+      <DependentUpon>NewBatchList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\BLASTING\NewBatchList.aspx.designer.cs">
+      <DependentUpon>NewBatchList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pts\BLASTING\TakePicture.aspx.cs">
+      <DependentUpon>TakePicture.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\BLASTING\TakePicture.aspx.designer.cs">
+      <DependentUpon>TakePicture.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pts\CALIBRATION\CALIBRATION.Master.cs">
+      <DependentUpon>CALIBRATION.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\CALIBRATION\CALIBRATION.Master.designer.cs">
+      <DependentUpon>CALIBRATION.Master</DependentUpon>
+    </Compile>
+    <Compile Include="pts\CALIBRATION\CalibrationScan.aspx.cs">
+      <DependentUpon>CalibrationScan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\CALIBRATION\CalibrationScan.aspx.designer.cs">
+      <DependentUpon>CalibrationScan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pts\CALIBRATION\NewBatchList.aspx.cs">
+      <DependentUpon>NewBatchList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\CALIBRATION\NewBatchList.aspx.designer.cs">
+      <DependentUpon>NewBatchList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pts\CALIBRATION\TakePicture.aspx.cs">
+      <DependentUpon>TakePicture.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\CALIBRATION\TakePicture.aspx.designer.cs">
+      <DependentUpon>TakePicture.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pts\COATINGAPP\COATINGAPP.Master.cs">
+      <DependentUpon>COATINGAPP.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\COATINGAPP\COATINGAPP.Master.designer.cs">
+      <DependentUpon>COATINGAPP.Master</DependentUpon>
+    </Compile>
+    <Compile Include="pts\COATINGAPP\CoatingAppScan.aspx.cs">
+      <DependentUpon>CoatingAppScan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\COATINGAPP\CoatingAppScan.aspx.designer.cs">
+      <DependentUpon>CoatingAppScan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pts\COATINGAPP\NewBatchList.aspx.cs">
+      <DependentUpon>NewBatchList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\COATINGAPP\NewBatchList.aspx.designer.cs">
+      <DependentUpon>NewBatchList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pts\COATINGAPP\TakePicture.aspx.cs">
+      <DependentUpon>TakePicture.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\COATINGAPP\TakePicture.aspx.designer.cs">
+      <DependentUpon>TakePicture.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pts\FINALINSPECTION\FINALINSPECTION.Master.cs">
+      <DependentUpon>FINALINSPECTION.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\FINALINSPECTION\FINALINSPECTION.Master.designer.cs">
+      <DependentUpon>FINALINSPECTION.Master</DependentUpon>
+    </Compile>
+    <Compile Include="pts\FINALINSPECTION\FinalScan.aspx.cs">
+      <DependentUpon>FinalScan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\FINALINSPECTION\FinalScan.aspx.designer.cs">
+      <DependentUpon>FinalScan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pts\FINALINSPECTION\Hold.aspx.cs">
+      <DependentUpon>Hold.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\FINALINSPECTION\Hold.aspx.designer.cs">
+      <DependentUpon>Hold.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pts\FINALINSPECTION\NewBatchList.aspx.cs">
+      <DependentUpon>NewBatchList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\FINALINSPECTION\NewBatchList.aspx.designer.cs">
+      <DependentUpon>NewBatchList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pts\FINALINSPECTION\ParkList\addparameters.aspx.cs">
+      <DependentUpon>addparameters.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\FINALINSPECTION\ParkList\addparameters.aspx.designer.cs">
+      <DependentUpon>addparameters.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pts\FINALINSPECTION\ParkList\GetBatch.aspx.cs">
+      <DependentUpon>GetBatch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\FINALINSPECTION\ParkList\GetBatch.aspx.designer.cs">
+      <DependentUpon>GetBatch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pts\FINALINSPECTION\ParkList\homepage.aspx.cs">
+      <DependentUpon>homepage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\FINALINSPECTION\ParkList\homepage.aspx.designer.cs">
+      <DependentUpon>homepage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pts\FINALINSPECTION\ParkList\Park.Master.cs">
+      <DependentUpon>Park.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\FINALINSPECTION\ParkList\Park.Master.designer.cs">
+      <DependentUpon>Park.Master</DependentUpon>
+    </Compile>
+    <Compile Include="pts\FINALINSPECTION\ParkList\ParkList.aspx.cs">
+      <DependentUpon>ParkList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\FINALINSPECTION\ParkList\ParkList.aspx.designer.cs">
+      <DependentUpon>ParkList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pts\FINALINSPECTION\ParkList\Post.aspx.cs">
+      <DependentUpon>Post.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\FINALINSPECTION\ParkList\Post.aspx.designer.cs">
+      <DependentUpon>Post.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pts\FINALINSPECTION\Print.aspx.cs">
+      <DependentUpon>Print.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\FINALINSPECTION\Print.aspx.designer.cs">
+      <DependentUpon>Print.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pts\FINALINSPECTION\Saleorderbatch.aspx.cs">
+      <DependentUpon>Saleorderbatch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\FINALINSPECTION\Saleorderbatch.aspx.designer.cs">
+      <DependentUpon>Saleorderbatch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pts\FINALINSPECTION\TakePicture.aspx.cs">
+      <DependentUpon>TakePicture.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\FINALINSPECTION\TakePicture.aspx.designer.cs">
+      <DependentUpon>TakePicture.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pts\homepage.aspx.cs">
+      <DependentUpon>homepage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\homepage.aspx.designer.cs">
+      <DependentUpon>homepage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pts\INBOUND\INBOUND.Master.cs">
+      <DependentUpon>INBOUND.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\INBOUND\INBOUND.Master.designer.cs">
+      <DependentUpon>INBOUND.Master</DependentUpon>
+    </Compile>
+    <Compile Include="pts\INBOUND\InboundScan.aspx.cs">
+      <DependentUpon>InboundScan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\INBOUND\InboundScan.aspx.designer.cs">
+      <DependentUpon>InboundScan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pts\INBOUND\NewBatchList.aspx.cs">
+      <DependentUpon>NewBatchList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\INBOUND\NewBatchList.aspx.designer.cs">
+      <DependentUpon>NewBatchList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pts\INBOUND\Saleorderbatch.aspx.cs">
+      <DependentUpon>Saleorderbatch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\INBOUND\Saleorderbatch.aspx.designer.cs">
+      <DependentUpon>Saleorderbatch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pts\INBOUND\TakePicture.aspx.cs">
+      <DependentUpon>TakePicture.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\INBOUND\TakePicture.aspx.designer.cs">
+      <DependentUpon>TakePicture.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pts\INDUCTIONENTRY\NewBatchList.aspx.cs">
+      <DependentUpon>NewBatchList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\INDUCTIONENTRY\NewBatchList.aspx.designer.cs">
+      <DependentUpon>NewBatchList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pts\INDUCTIONENTRY\INDUCTIONENTRY.Master.cs">
+      <DependentUpon>INDUCTIONENTRY.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\INDUCTIONENTRY\INDUCTIONENTRY.Master.designer.cs">
+      <DependentUpon>INDUCTIONENTRY.Master</DependentUpon>
+    </Compile>
+    <Compile Include="pts\MECHANICALLOGBOOK\MECHANICALLOGBOOK.Master.cs">
+      <DependentUpon>MECHANICALLOGBOOK.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\MECHANICALLOGBOOK\MECHANICALLOGBOOK.Master.designer.cs">
+      <DependentUpon>MECHANICALLOGBOOK.Master</DependentUpon>
+    </Compile>
+    <Compile Include="pts\MECHANICALLOGBOOK\NewBatchList.aspx.cs">
+      <DependentUpon>NewBatchList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\MECHANICALLOGBOOK\NewBatchList.aspx.designer.cs">
+      <DependentUpon>NewBatchList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pts\PLANTLOGBOOK\PLANTLOGBOOK.Master.cs">
+      <DependentUpon>PLANTLOGBOOK.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\PLANTLOGBOOK\PLANTLOGBOOK.Master.designer.cs">
+      <DependentUpon>PLANTLOGBOOK.Master</DependentUpon>
+    </Compile>
+    <Compile Include="pts\PLANTLOGBOOK\NewBatchList.aspx.cs">
+      <DependentUpon>NewBatchList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\PLANTLOGBOOK\NewBatchList.aspx.designer.cs">
+      <DependentUpon>NewBatchList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pts\PTS.Master.cs">
+      <DependentUpon>PTS.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\PTS.Master.designer.cs">
+      <DependentUpon>PTS.Master</DependentUpon>
+    </Compile>
+    <Compile Include="pts\Release\MultipleRelease.aspx.cs">
+      <DependentUpon>MultipleRelease.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\Release\MultipleRelease.aspx.designer.cs">
+      <DependentUpon>MultipleRelease.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pts\Release\NewBatchList.aspx.cs">
+      <DependentUpon>NewBatchList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\Release\NewBatchList.aspx.designer.cs">
+      <DependentUpon>NewBatchList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pts\Release\Release.Master.cs">
+      <DependentUpon>Release.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\Release\Release.Master.designer.cs">
+      <DependentUpon>Release.Master</DependentUpon>
+    </Compile>
+    <Compile Include="pts\Release\ReleaseScan.aspx.cs">
+      <DependentUpon>ReleaseScan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\Release\ReleaseScan.aspx.designer.cs">
+      <DependentUpon>ReleaseScan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pts\RINGCUT\RingCut.aspx.cs">
+      <DependentUpon>RingCut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\RINGCUT\RingCut.aspx.designer.cs">
+      <DependentUpon>RingCut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pts\RINGCUT\RINGCUT.Master.cs">
+      <DependentUpon>RINGCUT.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\RINGCUT\RINGCUT.Master.designer.cs">
+      <DependentUpon>RINGCUT.Master</DependentUpon>
+    </Compile>
+    <Compile Include="pts\SOLUBLESALTCONTAMINATION\NewBatchList.aspx.cs">
+      <DependentUpon>NewBatchList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\SOLUBLESALTCONTAMINATION\NewBatchList.aspx.designer.cs">
+      <DependentUpon>NewBatchList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pts\SOLUBLESALTCONTAMINATION\SOLUBLESALTCONTAMINATION.Master.cs">
+      <DependentUpon>SOLUBLESALTCONTAMINATION.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\SOLUBLESALTCONTAMINATION\SOLUBLESALTCONTAMINATION.Master.designer.cs">
+      <DependentUpon>SOLUBLESALTCONTAMINATION.Master</DependentUpon>
+    </Compile>
+    <Compile Include="pts\SOLUBLESALTCONTAMINATION\SolubleSaltContaminationScan.aspx.cs">
+      <DependentUpon>SolubleSaltContaminationScan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\SOLUBLESALTCONTAMINATION\SolubleSaltContaminationScan.aspx.designer.cs">
+      <DependentUpon>SolubleSaltContaminationScan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pts\SOLUBLESALTCONTAMINATION\TakePicture.aspx.cs">
+      <DependentUpon>TakePicture.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\SOLUBLESALTCONTAMINATION\TakePicture.aspx.designer.cs">
+      <DependentUpon>TakePicture.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pts\STEALINSPECTION\NewBatchList.aspx.cs">
+      <DependentUpon>NewBatchList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\STEALINSPECTION\NewBatchList.aspx.designer.cs">
+      <DependentUpon>NewBatchList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pts\STEALINSPECTION\STEALINSPECTION.Master.cs">
+      <DependentUpon>STEALINSPECTION.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\STEALINSPECTION\STEALINSPECTION.Master.designer.cs">
+      <DependentUpon>STEALINSPECTION.Master</DependentUpon>
+    </Compile>
+    <Compile Include="pts\STEALINSPECTION\StealInsScan.aspx.cs">
+      <DependentUpon>StealInsScan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\STEALINSPECTION\StealInsScan.aspx.designer.cs">
+      <DependentUpon>StealInsScan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pts\STEALINSPECTION\TakePicture.aspx.cs">
+      <DependentUpon>TakePicture.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\STEALINSPECTION\TakePicture.aspx.designer.cs">
+      <DependentUpon>TakePicture.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pts\STENCILVARIFICATION\NewBatchList.aspx.cs">
+      <DependentUpon>NewBatchList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\STENCILVARIFICATION\NewBatchList.aspx.designer.cs">
+      <DependentUpon>NewBatchList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pts\STENCILVARIFICATION\StencilVarification.Master.cs">
+      <DependentUpon>StencilVarification.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\STENCILVARIFICATION\StencilVarification.Master.designer.cs">
+      <DependentUpon>StencilVarification.Master</DependentUpon>
+    </Compile>
+    <Compile Include="pts\STENCILVARIFICATION\StencilVarificationScan.aspx.cs">
+      <DependentUpon>StencilVarificationScan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\STENCILVARIFICATION\StencilVarificationScan.aspx.designer.cs">
+      <DependentUpon>StencilVarificationScan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pts\STRIPPING\NewBatchList.aspx.cs">
+      <DependentUpon>NewBatchList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\STRIPPING\NewBatchList.aspx.designer.cs">
+      <DependentUpon>NewBatchList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pts\STRIPPING\STRIPPING.Master.cs">
+      <DependentUpon>STRIPPING.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\STRIPPING\STRIPPING.Master.designer.cs">
+      <DependentUpon>STRIPPING.Master</DependentUpon>
+    </Compile>
+    <Compile Include="pts\STRIPPING\StrippingScan.aspx.cs">
+      <DependentUpon>StrippingScan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\STRIPPING\StrippingScan.aspx.designer.cs">
+      <DependentUpon>StrippingScan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pts\STRIPPING\TakePicture.aspx.cs">
+      <DependentUpon>TakePicture.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pts\STRIPPING\TakePicture.aspx.designer.cs">
+      <DependentUpon>TakePicture.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\analytics.js.download" />
+    <Content Include="css\login\analytics.js.download" />
+    <Content Include="css\login\animsition.min.js.download" />
+    <Content Include="css\login\bootstrap.min.js.download" />
+    <Content Include="css\login\countdowntime.js.download" />
+    <Content Include="css\login\daterangepicker.js.download" />
+    <Content Include="css\login\jquery-3.2.1.min.js.download" />
+    <Content Include="css\login\js" />
+    <Content Include="css\login\main.js.download" />
+    <Content Include="css\login\moment.min.js.download" />
+    <Content Include="css\login\popper.js.download" />
+    <Content Include="css\login\s.js.download" />
+    <Content Include="css\login\select2.min.js.download" />
+    <None Include="packages.config" />
+    <Content Include="SCAN_files\js" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\.signature.p7s" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.Extensions.props" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.Extensions.props" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net45\app.config.install.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net45\app.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net45\web.config.install.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net45\web.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net46\app.config.install.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net46\app.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net46\web.config.install.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net46\web.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1.nupkg" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\net45\install.ps1" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\net45\uninstall.ps1" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\csc.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\csc.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\csi.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.CSharp.Core.targets" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\vbc.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\vbc.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\VBCSCompiler.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\csc.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\csc.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\csi.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\csi.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.CSharp.Core.targets" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.Managed.Core.targets" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\vbc.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\vbc.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\VBCSCompiler.exe.config" />
+    <Content Include="pts\PTS.Master" />
+    <Content Include="pts\INBOUND\INBOUND.Master" />
+    <Content Include="pts\BLASTING\BLASTING.Master" />
+    <Content Include="pts\STEALINSPECTION\STEALINSPECTION.Master" />
+    <Content Include="pts\COATINGAPP\COATINGAPP.Master" />
+    <Content Include="pts\FINALINSPECTION\FINALINSPECTION.Master" />
+    <Content Include="pts\ACID\Acid.Master" />
+    <Content Include="pts\STRIPPING\STRIPPING.Master" />
+    <Content Include="pts\FINALINSPECTION\ParkList\Park.Master" />
+    <Content Include="pts\Release\Release.Master" />
+    <Content Include="pts\STENCILVARIFICATION\StencilVarification.Master" />
+    <Content Include="pts\CALIBRATION\CALIBRATION.Master" />
+    <Content Include="pts\SOLUBLESALTCONTAMINATION\SOLUBLESALTCONTAMINATION.Master" />
+    <Content Include="pts\RINGCUT\RINGCUT.Master" />
+    <Content Include="pts\INDUCTIONENTRY\INDUCTIONENTRY.Master" />
+    <Content Include="pts\PLANTLOGBOOK\PLANTLOGBOOK.Master" />
+    <Content Include="pts\MECHANICALLOGBOOK\MECHANICALLOGBOOK.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\roslyn\" />
+    <Folder Include="pts\ACID\Uploads\" />
+    <Folder Include="pts\BLASTING\Uploads\" />
+    <Folder Include="pts\COATINGAPP\Uploads\" />
+    <Folder Include="pts\FINALINSPECTION\Uploads\" />
+    <Folder Include="pts\INBOUND\Uploads\" />
+    <Folder Include="pts\STEALINSPECTION\Uploads\" />
+    <Folder Include="pts\STRIPPING\Uploads\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>59378</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:59378/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
