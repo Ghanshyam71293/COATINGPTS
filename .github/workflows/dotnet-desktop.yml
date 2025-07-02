@@ -28,13 +28,10 @@ jobs:
       - name: Publish web project
         run: msbuild $env:PROJECT_FILE /p:DeployOnBuild=true /p:WebPublishMethod=FileSystem /p:Configuration=Release /p:PublishDir=${{ env.PUBLISH_DIR }}
 
-      - name: Deploy to IIS via Web Deploy
-        run: >
-          "C:\Program Files\IIS\Microsoft Web Deploy V3\msdeploy.exe"
-          -source:package='${{ env.PUBLISH_DIR }}'
-          -dest:auto,ComputerName='https://${{ secrets.IIS_SERVER }}:8172/msdeploy.axd?site=${{ secrets.IIS_SITE_NAME }}',UserName='${{ secrets.IIS_USERNAME }}',Password='${{ secrets.IIS_PASSWORD }}',AuthType='Basic'
-          -verb:sync
-          -allowUntrusted
+      - name: Deploy to IIS using Web Deploy
+        shell: pwsh
+        run: |
+          & "C:\Program Files\IIS\Microsoft Web Deploy V3\msdeploy.exe" -source:package='path\to\package.zip' -dest:auto,computerName='https://$env:IIS_SERVER:8172/msdeploy.axd',userName='$env:IIS_USERNAME',password='$env:IIS_PASSWORD',authType='Basic' -allowUntrusted
         env:
           IIS_SERVER: ${{ secrets.IIS_SERVER }}
           IIS_SITE_NAME: ${{ secrets.IIS_SITE_NAME }}
