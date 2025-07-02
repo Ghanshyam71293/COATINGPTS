@@ -1,0 +1,195 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PTS.master.cs" Inherits="PTSCOATING.pts.PTS" %>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server" id="header">
+    <title>Jindal PTS</title>
+    <!-- Main CSS-->
+    <link rel="stylesheet" type="text/css" href="../css/usercss/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/usercss/css/dynamic.css">
+    <!-- Font-icon css-->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="app sidebar-mini">
+    <form runat="server" id="form1">
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+        <!-- Navbar-->
+        <header class="app-header">
+                      <%--  <a class="app-header__logo"  href="../home.aspx" > <image style="width:213px; height:80px"  src="../assets/Jindal_Logo.jpg"></image> </a>
+      &nbsp;&nbsp;   &nbsp;&nbsp;   &nbsp;&nbsp;   &nbsp;&nbsp; &nbsp;&nbsp;   &nbsp;&nbsp;   &nbsp;&nbsp;   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b align="center" style="line-height:2.5">PTS COATING <%=Session["StationType"].ToString()%> </b>--%>
+             <a class="app-header__logo" style="background-color:#009688!important;"  href="../Home.aspx">
+             <img  style="width:80px; height:80px;" src="../assets/Jindal_Logo.jpg"/>   </a> 
+             <b class="app-menu__label" style="color:#ffffff!important;text-align:center!important;line-height:2.1!important;flex: 5 1 auto!important;">PTS COATING <%=Session["StationType"].ToString()%></b>
+            <ul class="app-nav">
+                <li class="dropdown"><%--<a class="app-nav__item" href="#" data-toggle="dropdown" aria-label="Open Profile Menu"><i class="fa fa-user fa-lg"></i></a>--%>
+                        <a class="app-nav__item" href="#" data-toggle="dropdown" aria-label="Open Profile Menu"  style="padding-bottom:0px!important; text-decoration: none; text-align:center!important;"><i class="fa fa-user fa-lg"></i><br /><span style="font-size:12px;"> <asp:Literal ID="litusername" runat="server"></asp:Literal></span></a>
+                    <ul class="dropdown-menu settings-menu dropdown-menu-right">
+                        <li><a class="dropdown-item" href="../logout.aspx"><i class="fa fa-sign-out fa-lg"></i>Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </header>
+        <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
+        <aside class="app-sidebar" runat="server" visible="false">
+            <div class="app-sidebar__user">
+                <p class="app-sidebar__user-name">
+                   <%-- User Name-
+                    <asp:Literal ID="litusername" runat="server"></asp:Literal>--%>
+                </p>
+                <%--<p class="app-sidebar__user-designation"> Developer</p>--%>
+            </div>
+
+            <ul class="app-menu">
+                <li><a class="app-menu__item active" href="/homepage.aspx"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">Dashboard</span></a></li>
+                <li><a class="app-menu__item" href="Default.aspx"><i class="fa fa-sign-out fa-lg"></i><span class="app-menu__label">New Park</span></a></li>
+                <li><a class="app-menu__item" href="ParkList.aspx"><i class="fa fa-sign-out fa-lg"></i><span class="app-menu__label">Park List</span></a></li>
+                <li><a class="app-menu__item" href="add-sub.aspx"><i class="fa fa-sign-out fa-lg"></i><span class="app-menu__label">Add/Remove More</span></a></li>
+                <li><a class="app-menu__item" href="logout.aspx"><i class="fa fa-sign-out fa-lg"></i><span class="app-menu__label">Logout</span></a></li>
+            </ul>
+        </aside>
+        <main class="app-content" style="margin-left:0px;"">
+               <div class="row">
+                      <div class="col-md-4">
+                          </div>
+                      <div class="col-md-4">
+                     <%--<h1>Login ID-
+                    <asp:Literal ID="litusername" runat="server"></asp:Literal></h1>--%>
+                          </div>
+                     <div class="col-md-4">
+                         </div>
+                    </div>
+             <br />
+             <br />
+             <br />
+             <br />
+          <div class="row">
+                   <div class="col-md-12 text-center" runat="server" id="DIVINBOUND"  visible="false">
+                    <a href="INBOUND/InboundScan.aspx" class="btn btn-primary  col-md-8" style="height:100px;font-size:larger; line-height:2.0;">INBOUND <%=Session["StationType"].ToString()%></a>
+                  <br />
+                  <br />
+                   </div>
+               <div class="col-md-12 text-center" runat="server" id="DIVBLASTING"  visible="false">
+                    <a href="BLASTING/BlastingScan.aspx" class="btn btn-primary  col-md-8" style="height:100px;font-size:larger; line-height:2.0;">SHOT BLASTING <%=Session["StationType"].ToString()%></a>
+                <br />
+                   <br />
+               </div>
+                 <div class="col-md-12 text-center" runat="server" id="DIVSTEALINSPECTION"  visible="false">
+                    <a href="STEALINSPECTION/StealInsScan.aspx" class="btn btn-primary  col-md-8" style="height:100px;font-size:larger; line-height:2.0;">STEEL INSPECTION <%=Session["StationType"].ToString()%></a>
+                <br />
+                   <br />
+               </div>
+                <div class="col-md-12 text-center" runat="server" id="DIVACID"  visible="false">
+                    <a href="ACID/AcidScan.aspx" class="btn btn-primary  col-md-8" style="height:100px;font-size:larger; line-height:2.0;">ACID WASH <%=Session["StationType"].ToString()%></a>
+                <br />
+                   <br />
+               </div>
+              
+               <div class="col-md-12 text-center" runat="server" id="DIVCOATINGAPP"  visible="false">
+                    <a href="COATINGAPP/CoatingAppScan.aspx" class="btn btn-primary  col-md-8" style="height:100px;font-size:larger; line-height:2.0;">COATING APPLICATION <%=Session["StationType"].ToString()%></a>
+                <br />
+                   <br />
+               </div>
+             
+               <div class="col-md-12 text-center" runat="server" id="DIVFINALINSPECTION"  visible="false">
+                    <a href="FINALINSPECTION/FinalScan.aspx" class="btn btn-primary  col-md-8" style="height:100px;font-size:larger; line-height:2.0;">FINAL INSPECTION <%=Session["StationType"].ToString()%></a>
+                <br />
+                   <br />
+               </div>
+                <div class="col-md-12 text-center" runat="server" id="DIVSTRIPPING"  visible="false">
+                    <a href="STRIPPING/StrippingScan.aspx" class="btn btn-primary  col-md-8" style="height:100px;font-size:larger; line-height:2.0;">STRIPPING <%=Session["StationType"].ToString()%></a>
+                <br />
+                   <br />
+               </div>
+               <div class="col-md-12 text-center" runat="server" id="DIVRELEASE"  visible="false">
+                    <a href="Release/ReleaseScan.aspx" class="btn btn-primary  col-md-8" style="height:100px;font-size:larger; line-height:2.0;">HOLD RELEASE</a>
+                <br />
+                   <br />
+               </div>
+                <div class="col-md-12 text-center" runat="server" id="DIVSTENCILVARIFICATION"  visible="false">
+                    <a href="STENCILVARIFICATION/StencilVarificationScan.aspx" class="btn btn-primary  col-md-8" style="height:100px;font-size:larger; line-height:2.0;">STENCIL VERIFICATION</a>
+                <br />
+                   <br />
+               </div>
+              <div class="col-md-12 text-center" runat="server" id="DIVCALIBRATION"  visible="false">
+                    <a href="CALIBRATION/NewBatchList.aspx" class="btn btn-primary  col-md-8" style="height:100px;font-size:larger; line-height:2.0;">CALIBRATION</a>
+                <br />
+                   <br />
+               </div>
+              
+                  <div class="col-md-12 text-center" runat="server" id="DIVSOLUBLESALTCONTAMINATION"  visible="false">
+                    <a href="SOLUBLESALTCONTAMINATION/NewBatchList.aspx" class="btn btn-primary  col-md-8" style="height:100px;font-size:larger; line-height:2.0;">SOLUBLE SALT CONTAMINATION</a>
+                <br />
+                   <br />
+               </div>
+              <div class="col-md-12 text-center" runat="server" id="DIVRINGCUT"  visible="false">
+                    <a href="RINGCUT/RingCut.aspx" class="btn btn-primary  col-md-8" style="height:100px;font-size:larger; line-height:2.0;">RING CUT</a>
+                <br />
+                   <br />
+               </div>
+              <div class="col-md-12 text-center" runat="server" id="DIVInductionEntry" visible="false">
+                    <a href="INDUCTIONENTRY/NewBatchList.aspx" class="btn btn-primary  col-md-8" style="height:100px;font-size:larger; line-height:2.0;">INDUCTION ENTRY</a>
+                <br />
+                   <br />
+               </div>
+              <div class="col-md-12 text-center" runat="server" id="DIVPLANTLOGBOOK" visible="false">
+                    <a href="PLANTLOGBOOK/NewBatchList.aspx" class="btn btn-primary  col-md-8" style="height:100px;font-size:larger; line-height:2.0;">PLANT LOG BOOK</a>
+                <br />
+                   <br />
+               </div>
+             <div class="col-md-12 text-center" runat="server" id="DIVMECHANICALLOGBOOK">
+                    <a href="MECHANICALLOGBOOK/NewBatchList.aspx" class="btn btn-primary  col-md-8" style="height:100px;font-size:larger; line-height:2.0;">MECHANICAL LOG BOOK</a>
+                <br />
+                   <br />
+               </div>
+               
+                  </div>
+            <br />
+            <div class="row">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </main>
+        <script src="../css/usercss/js/jquery-3.3.1.min.js"></script>
+        <script src="../css/usercss/js/popper.min.js"></script>
+        <script src="../css/usercss/js/bootstrap.min.js"></script>
+        <script src="../css/usercss/js/main.js"></script>
+        <script src="../css/usercss/js/plugins/pace.min.js"></script>
+        <script type="text/javascript" src="../css/usercss/js/plugins/chart.js"></script>
+        <script src="../fancybox/jquery-1.4.3.min.js"></script>
+        <script type="text/javascript" src="../fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+        <script type="text/javascript" src="../fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+        <link rel="stylesheet" type="text/css" href="../fancybox/jquery.fancybox-1.3.4.css"
+            media="screen" />
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('#newpark').fancybox({
+                    'width': '70%',
+                    'height': '100%',
+                    'autoScale': true,
+                    'scrolling': true,
+                    'transitionIn': 'elastic',
+                    'transitionOut': 'elastic',
+                    'type': 'iframe'
+                });
+
+            });
+        </script>
+        <style>
+            @media(max-width:300px) {
+                .app-content {
+                    width: 300px;
+                }
+
+                .btn btn-info menu {
+                    width: 428px;
+                    height: 78px;
+                    font-size: 35px;
+                    margin-left: 223px;
+                }
+            }
+        </style>
+    </form>
+</body>
+</html>
