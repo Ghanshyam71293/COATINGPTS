@@ -29,9 +29,9 @@ jobs:
         run: msbuild $env:PROJECT_FILE /p:DeployOnBuild=true /p:WebPublishMethod=FileSystem /p:Configuration=Release /p:PublishDir=${{ env.PUBLISH_DIR }}
 
       - name: Deploy to IIS using Web Deploy
-  shell: pwsh
-  run: |
-    & "C:\Program Files\IIS\Microsoft Web Deploy V3\msdeploy.exe" -verb:sync -source:iisApp='path\to\published\folder' -dest:iisApp='YourSiteName',computerName='https://$env:IIS_SERVER:8172/msdeploy.axd',userName='$env:IIS_USERNAME',password='$env:IIS_PASSWORD',authType='Basic' -allowUntrusted
+        shell: pwsh
+        run: |
+          & "C:\Program Files\IIS\Microsoft Web Deploy V3\msdeploy.exe" -verb:sync -source:iisApp='path\to\published\folder' -dest:iisApp='YourSiteName',computerName='https://$env:IIS_SERVER:8172/msdeploy.axd',userName='$env:IIS_USERNAME',password='$env:IIS_PASSWORD',authType='Basic' -allowUntrusted
         env:
           IIS_SERVER: ${{ secrets.IIS_SERVER }}
           IIS_SITE_NAME: ${{ secrets.IIS_SITE_NAME }}
