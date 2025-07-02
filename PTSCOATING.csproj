@@ -135,7 +135,7 @@
     <Content Include="css\usercss\menu\ddaccordion.js" />
     <Content Include="css\usercss\menu\jindal.js" />
     <Content Include="css\usercss\menu\jquery.min.js" />
-    <Content Include="fancybox\blank.gif" />
+    <!-- <Content Include="fancybox\blank.gif" />
     <Content Include="fancybox\example\10_b.jpg" />
     <Content Include="fancybox\example\10_s.jpg" />
     <Content Include="fancybox\example\11_b.jpg" />
@@ -178,7 +178,7 @@
     <Content Include="fancybox\fancy_title_left.png" />
     <Content Include="fancybox\fancy_title_main.png" />
     <Content Include="fancybox\fancy_title_over.png" />
-    <Content Include="fancybox\fancy_title_right.png" />
+    <Content Include="fancybox\fancy_title_right.png" /> -->
     <Content Include="fancybox\fan\fancy-common.js" />
     <Content Include="fancybox\fan\jquery.fancybox.min.css" />
     <Content Include="fancybox\fan\jquery.fancybox.min.js" />
