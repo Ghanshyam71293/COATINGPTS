@@ -1,0 +1,76 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="RINGCUT.Master.cs" Inherits="PTSCOATING.pts.RINGCUT.RINGCUT" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server" id="header">
+    <title>Jindal PTS</title>
+    <!-- Main CSS-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="../../css/usercss/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../../css/usercss/css/dynamic.css">
+    <!-- Font-icon css-->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    .app-header__logo{
+        width:auto;
+    }
+</style>
+</head>
+<body class="app sidebar-mini">
+    <form runat="server" id="form1">
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+        <!-- Navbar-->
+        <header class="app-header">
+            <div class="col-2 col-sm-2 col-md-1 p-0">
+                <a class="app-header__logo p-0" href="../homepage.aspx">
+                    <image src="../../assets/Jindal_Logo.jpg" style="width:80px"></image>
+                </a>
+            </div>
+            <div class="col-8 col-sm-8 col-md-10 text-center pt-3">
+                <b>RING CUT </b>
+            </div>
+            <div class="col-2 col-sm-2 col-md-1">
+                <ul class="app-nav">
+                    <li class="dropdown">
+                        <a class="app-nav__item" href="#" data-toggle="dropdown" aria-label="Open Profile Menu" style="padding-bottom: 0px!important; text-decoration: none; text-align: center!important;"><i class="fa fa-user fa-lg"></i>
+                            <br />
+                            <span style="font-size: 12px;">
+                                <asp:Literal ID="litusername" runat="server"></asp:Literal></span></a>
+                        <ul class="dropdown-menu settings-menu dropdown-menu-right">
+                            <li><a class="dropdown-item" href="../../logout.aspx"><i class="fa fa-sign-out fa-lg"></i>Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+        </header>
+        <main class="app-content" style="margin-left: 0px">
+            <script src="../../css/usercss/js/jquery-3.3.1.min.js"></script>
+            <script src="../../css/usercss/js/popper.min.js"></script>
+            <script src="../../css/usercss/js/bootstrap.min.js"></script>
+            <script src="../../css/usercss/js/main.js"></script>
+            <script src="../../css/usercss/js/plugins/pace.min.js"></script>
+            <script type="text/javascript" src="../../css/usercss/js/plugins/chart.js"></script>
+            <div class="row">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </main>
+        <style>
+            @media(max-width:300px) {
+                .app-content {
+                    width: 300px;
+                }
+
+                .btn btn-info menu {
+                    width: 428px;
+                    height: 78px;
+                    font-size: 35px;
+                    margin-left: 223px;
+                }
+            }
+        </style>
+    </form>
+</body>
+</html>
