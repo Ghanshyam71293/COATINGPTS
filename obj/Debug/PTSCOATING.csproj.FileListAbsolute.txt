@@ -1,0 +1,167 @@
+D:\Barcode\PTSCOATING\PTSCOATING\obj\Debug\PTSCOATING.csproj.CoreCompileInputs.cache
+D:\Barcode\PTSCOATING\PTSCOATING\bin\PTSCOATING.dll.config
+D:\Barcode\PTSCOATING\PTSCOATING\bin\PTSCOATING.dll
+D:\Barcode\PTSCOATING\PTSCOATING\bin\PTSCOATING.pdb
+D:\Barcode\PTSCOATING\PTSCOATING\bin\roslyn\csc.exe
+D:\Barcode\PTSCOATING\PTSCOATING\bin\roslyn\csc.exe.config
+D:\Barcode\PTSCOATING\PTSCOATING\bin\roslyn\csc.rsp
+D:\Barcode\PTSCOATING\PTSCOATING\bin\roslyn\csi.exe
+D:\Barcode\PTSCOATING\PTSCOATING\bin\roslyn\csi.rsp
+D:\Barcode\PTSCOATING\PTSCOATING\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Barcode\PTSCOATING\PTSCOATING\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Barcode\PTSCOATING\PTSCOATING\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Barcode\PTSCOATING\PTSCOATING\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Barcode\PTSCOATING\PTSCOATING\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Barcode\PTSCOATING\PTSCOATING\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Barcode\PTSCOATING\PTSCOATING\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Barcode\PTSCOATING\PTSCOATING\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Barcode\PTSCOATING\PTSCOATING\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Barcode\PTSCOATING\PTSCOATING\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Barcode\PTSCOATING\PTSCOATING\bin\roslyn\System.AppContext.dll
+D:\Barcode\PTSCOATING\PTSCOATING\bin\roslyn\System.Collections.Immutable.dll
+D:\Barcode\PTSCOATING\PTSCOATING\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Barcode\PTSCOATING\PTSCOATING\bin\roslyn\System.IO.FileSystem.dll
+D:\Barcode\PTSCOATING\PTSCOATING\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Barcode\PTSCOATING\PTSCOATING\bin\roslyn\System.Reflection.Metadata.dll
+D:\Barcode\PTSCOATING\PTSCOATING\bin\roslyn\vbc.exe
+D:\Barcode\PTSCOATING\PTSCOATING\bin\roslyn\vbc.exe.config
+D:\Barcode\PTSCOATING\PTSCOATING\bin\roslyn\vbc.rsp
+D:\Barcode\PTSCOATING\PTSCOATING\bin\roslyn\VBCSCompiler.exe
+D:\Barcode\PTSCOATING\PTSCOATING\bin\roslyn\VBCSCompiler.exe.config
+D:\Barcode\PTSCOATING\PTSCOATING\obj\Debug\PTSCOATING.csproj.CopyComplete
+D:\Barcode\PTSCOATING\PTSCOATING\obj\Debug\PTSCOATING.dll
+D:\Barcode\PTSCOATING\PTSCOATING\obj\Debug\PTSCOATING.pdb
+D:\Barcode\PTSCOATING\PTSCOATING\obj\Debug\PTSCOATING.csproj.AssemblyReference.cache
+E:\LIVE APPS\PTS-COATING-BT01-USA-PRD\bin\PTSCOATING.dll.config
+E:\LIVE APPS\PTS-COATING-BT01-USA-PRD\bin\PTSCOATING.dll
+E:\LIVE APPS\PTS-COATING-BT01-USA-PRD\bin\PTSCOATING.pdb
+E:\LIVE APPS\PTS-COATING-BT01-USA-PRD\bin\roslyn\csc.exe
+E:\LIVE APPS\PTS-COATING-BT01-USA-PRD\bin\roslyn\csc.exe.config
+E:\LIVE APPS\PTS-COATING-BT01-USA-PRD\bin\roslyn\csc.rsp
+E:\LIVE APPS\PTS-COATING-BT01-USA-PRD\bin\roslyn\csi.exe
+E:\LIVE APPS\PTS-COATING-BT01-USA-PRD\bin\roslyn\csi.rsp
+E:\LIVE APPS\PTS-COATING-BT01-USA-PRD\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\LIVE APPS\PTS-COATING-BT01-USA-PRD\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\LIVE APPS\PTS-COATING-BT01-USA-PRD\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\LIVE APPS\PTS-COATING-BT01-USA-PRD\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\LIVE APPS\PTS-COATING-BT01-USA-PRD\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\LIVE APPS\PTS-COATING-BT01-USA-PRD\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\LIVE APPS\PTS-COATING-BT01-USA-PRD\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\LIVE APPS\PTS-COATING-BT01-USA-PRD\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\LIVE APPS\PTS-COATING-BT01-USA-PRD\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\LIVE APPS\PTS-COATING-BT01-USA-PRD\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\LIVE APPS\PTS-COATING-BT01-USA-PRD\bin\roslyn\System.AppContext.dll
+E:\LIVE APPS\PTS-COATING-BT01-USA-PRD\bin\roslyn\System.Collections.Immutable.dll
+E:\LIVE APPS\PTS-COATING-BT01-USA-PRD\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\LIVE APPS\PTS-COATING-BT01-USA-PRD\bin\roslyn\System.IO.FileSystem.dll
+E:\LIVE APPS\PTS-COATING-BT01-USA-PRD\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\LIVE APPS\PTS-COATING-BT01-USA-PRD\bin\roslyn\System.Reflection.Metadata.dll
+E:\LIVE APPS\PTS-COATING-BT01-USA-PRD\bin\roslyn\vbc.exe
+E:\LIVE APPS\PTS-COATING-BT01-USA-PRD\bin\roslyn\vbc.exe.config
+E:\LIVE APPS\PTS-COATING-BT01-USA-PRD\bin\roslyn\vbc.rsp
+E:\LIVE APPS\PTS-COATING-BT01-USA-PRD\bin\roslyn\VBCSCompiler.exe
+E:\LIVE APPS\PTS-COATING-BT01-USA-PRD\bin\roslyn\VBCSCompiler.exe.config
+E:\LIVE APPS\PTS-COATING-BT01-USA-PRD\obj\Debug\PTSCOATING.csproj.CopyComplete
+E:\LIVE APPS\PTS-COATING-BT01-USA-PRD\obj\Debug\PTSCOATING.dll
+E:\LIVE APPS\PTS-COATING-BT01-USA-PRD\obj\Debug\PTSCOATING.pdb
+E:\LIVE APPS\PTS-COATING-BT01-USA-PRD\obj\Debug\PTSCOATING.csprojAssemblyReference.cache
+D:\Barcode\PTS-COATING-BT01-USA-PRD\bin\PTSCOATING.dll.config
+D:\Barcode\PTS-COATING-BT01-USA-PRD\bin\PTSCOATING.dll
+D:\Barcode\PTS-COATING-BT01-USA-PRD\bin\PTSCOATING.pdb
+D:\Barcode\PTS-COATING-BT01-USA-PRD\bin\roslyn\csc.exe
+D:\Barcode\PTS-COATING-BT01-USA-PRD\bin\roslyn\csc.exe.config
+D:\Barcode\PTS-COATING-BT01-USA-PRD\bin\roslyn\csc.rsp
+D:\Barcode\PTS-COATING-BT01-USA-PRD\bin\roslyn\csi.exe
+D:\Barcode\PTS-COATING-BT01-USA-PRD\bin\roslyn\csi.rsp
+D:\Barcode\PTS-COATING-BT01-USA-PRD\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Barcode\PTS-COATING-BT01-USA-PRD\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Barcode\PTS-COATING-BT01-USA-PRD\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Barcode\PTS-COATING-BT01-USA-PRD\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Barcode\PTS-COATING-BT01-USA-PRD\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Barcode\PTS-COATING-BT01-USA-PRD\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Barcode\PTS-COATING-BT01-USA-PRD\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Barcode\PTS-COATING-BT01-USA-PRD\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Barcode\PTS-COATING-BT01-USA-PRD\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Barcode\PTS-COATING-BT01-USA-PRD\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Barcode\PTS-COATING-BT01-USA-PRD\bin\roslyn\System.AppContext.dll
+D:\Barcode\PTS-COATING-BT01-USA-PRD\bin\roslyn\System.Collections.Immutable.dll
+D:\Barcode\PTS-COATING-BT01-USA-PRD\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Barcode\PTS-COATING-BT01-USA-PRD\bin\roslyn\System.IO.FileSystem.dll
+D:\Barcode\PTS-COATING-BT01-USA-PRD\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Barcode\PTS-COATING-BT01-USA-PRD\bin\roslyn\System.Reflection.Metadata.dll
+D:\Barcode\PTS-COATING-BT01-USA-PRD\bin\roslyn\vbc.exe
+D:\Barcode\PTS-COATING-BT01-USA-PRD\bin\roslyn\vbc.exe.config
+D:\Barcode\PTS-COATING-BT01-USA-PRD\bin\roslyn\vbc.rsp
+D:\Barcode\PTS-COATING-BT01-USA-PRD\bin\roslyn\VBCSCompiler.exe
+D:\Barcode\PTS-COATING-BT01-USA-PRD\bin\roslyn\VBCSCompiler.exe.config
+D:\Barcode\PTS-COATING-BT01-USA-PRD\obj\Debug\PTSCOATING.csproj.CoreCompileInputs.cache
+D:\Barcode\PTS-COATING-BT01-USA-PRD\obj\Debug\PTSCOATING.csproj.CopyComplete
+D:\Barcode\PTS-COATING-BT01-USA-PRD\obj\Debug\PTSCOATING.dll
+D:\Barcode\PTS-COATING-BT01-USA-PRD\obj\Debug\PTSCOATING.pdb
+E:\COATINGPTS\bin\PTSCOATING.dll.config
+E:\COATINGPTS\bin\PTSCOATING.dll
+E:\COATINGPTS\bin\PTSCOATING.pdb
+E:\COATINGPTS\bin\roslyn\csc.exe
+E:\COATINGPTS\bin\roslyn\csc.exe.config
+E:\COATINGPTS\bin\roslyn\csc.rsp
+E:\COATINGPTS\bin\roslyn\csi.exe
+E:\COATINGPTS\bin\roslyn\csi.rsp
+E:\COATINGPTS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\COATINGPTS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\COATINGPTS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\COATINGPTS\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\COATINGPTS\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\COATINGPTS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\COATINGPTS\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\COATINGPTS\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\COATINGPTS\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\COATINGPTS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\COATINGPTS\bin\roslyn\System.AppContext.dll
+E:\COATINGPTS\bin\roslyn\System.Collections.Immutable.dll
+E:\COATINGPTS\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\COATINGPTS\bin\roslyn\System.IO.FileSystem.dll
+E:\COATINGPTS\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\COATINGPTS\bin\roslyn\System.Reflection.Metadata.dll
+E:\COATINGPTS\bin\roslyn\vbc.exe
+E:\COATINGPTS\bin\roslyn\vbc.exe.config
+E:\COATINGPTS\bin\roslyn\vbc.rsp
+E:\COATINGPTS\bin\roslyn\VBCSCompiler.exe
+E:\COATINGPTS\bin\roslyn\VBCSCompiler.exe.config
+E:\COATINGPTS\obj\Debug\PTSCOATING.csproj.CopyComplete
+E:\COATINGPTS\obj\Debug\PTSCOATING.dll
+E:\COATINGPTS\obj\Debug\PTSCOATING.pdb
+E:\COATINGPTS\obj\Debug\PTSCOATING.csprojAssemblyReference.cache
+E:\DEV-APPS\USAPTS\COATINGPTS\bin\PTSCOATING.dll.config
+E:\DEV-APPS\USAPTS\COATINGPTS\bin\PTSCOATING.dll
+E:\DEV-APPS\USAPTS\COATINGPTS\bin\PTSCOATING.pdb
+E:\DEV-APPS\USAPTS\COATINGPTS\bin\roslyn\csc.exe
+E:\DEV-APPS\USAPTS\COATINGPTS\bin\roslyn\csc.exe.config
+E:\DEV-APPS\USAPTS\COATINGPTS\bin\roslyn\csc.rsp
+E:\DEV-APPS\USAPTS\COATINGPTS\bin\roslyn\csi.exe
+E:\DEV-APPS\USAPTS\COATINGPTS\bin\roslyn\csi.rsp
+E:\DEV-APPS\USAPTS\COATINGPTS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\DEV-APPS\USAPTS\COATINGPTS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\DEV-APPS\USAPTS\COATINGPTS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\DEV-APPS\USAPTS\COATINGPTS\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\DEV-APPS\USAPTS\COATINGPTS\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\DEV-APPS\USAPTS\COATINGPTS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\DEV-APPS\USAPTS\COATINGPTS\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\DEV-APPS\USAPTS\COATINGPTS\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\DEV-APPS\USAPTS\COATINGPTS\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\DEV-APPS\USAPTS\COATINGPTS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\DEV-APPS\USAPTS\COATINGPTS\bin\roslyn\System.AppContext.dll
+E:\DEV-APPS\USAPTS\COATINGPTS\bin\roslyn\System.Collections.Immutable.dll
+E:\DEV-APPS\USAPTS\COATINGPTS\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\DEV-APPS\USAPTS\COATINGPTS\bin\roslyn\System.IO.FileSystem.dll
+E:\DEV-APPS\USAPTS\COATINGPTS\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\DEV-APPS\USAPTS\COATINGPTS\bin\roslyn\System.Reflection.Metadata.dll
+E:\DEV-APPS\USAPTS\COATINGPTS\bin\roslyn\vbc.exe
+E:\DEV-APPS\USAPTS\COATINGPTS\bin\roslyn\vbc.exe.config
+E:\DEV-APPS\USAPTS\COATINGPTS\bin\roslyn\vbc.rsp
+E:\DEV-APPS\USAPTS\COATINGPTS\bin\roslyn\VBCSCompiler.exe
+E:\DEV-APPS\USAPTS\COATINGPTS\bin\roslyn\VBCSCompiler.exe.config
+E:\DEV-APPS\USAPTS\COATINGPTS\obj\Debug\PTSCOATING.csprojAssemblyReference.cache
+E:\DEV-APPS\USAPTS\COATINGPTS\obj\Debug\PTSCOATING.csproj.CoreCompileInputs.cache
+E:\DEV-APPS\USAPTS\COATINGPTS\obj\Debug\PTSCOATING.csproj.CopyComplete
+E:\DEV-APPS\USAPTS\COATINGPTS\obj\Debug\PTSCOATING.dll
+E:\DEV-APPS\USAPTS\COATINGPTS\obj\Debug\PTSCOATING.pdb
