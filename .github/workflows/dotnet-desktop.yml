@@ -30,7 +30,7 @@ jobs:
 
       - name: Deploy to IIS via Web Deploy
         run: >
-          msdeploy.exe
+          "C:\Program Files\IIS\Microsoft Web Deploy V3\msdeploy.exe"
           -source:package='${{ env.PUBLISH_DIR }}'
           -dest:auto,ComputerName='https://${{ secrets.IIS_SERVER }}:8172/msdeploy.axd?site=${{ secrets.IIS_SITE_NAME }}',UserName='${{ secrets.IIS_USERNAME }}',Password='${{ secrets.IIS_PASSWORD }}',AuthType='Basic'
           -verb:sync
