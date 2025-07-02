@@ -1,0 +1,89 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="StencilVarification.master.cs" Inherits="PTSCOATING.pts.STENCILVARIFICATION.StencilVarification" %>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server" id="header">
+    <title>Jindal PTS</title>
+    <!-- Main CSS-->
+    <link rel="stylesheet" type="text/css" href="../../css/usercss/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../../css/usercss/css/dynamic.css">
+    <!-- Font-icon css-->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="app sidebar-mini">
+    <form runat="server" id="form1">
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+        <!-- Navbar-->
+        <header class="app-header">
+                        <a class="app-header__logo"  href="../homepage.aspx" > <image style="width:213px; height:80px"    src="../../assets/Jindal_Logo.jpg"></image> </a>
+   
+                  &nbsp;&nbsp;   &nbsp;&nbsp;   &nbsp;&nbsp;   &nbsp;&nbsp; &nbsp;&nbsp;   &nbsp;&nbsp;   &nbsp;&nbsp;   &nbsp;&nbsp; <b align="center" style="line-height:2.5">STENCIL VERIFICATION</b>
+            <%--    <a class="app-sidebar__toggle" href="#" data-toggle="sidebar" aria-label="Hide Sidebar"></a>--%>
+            <ul class="app-nav">
+                <li class="dropdown"><%--<a class="app-nav__item" href="#" data-toggle="dropdown" aria-label="Open Profile Menu"><i class="fa fa-user fa-lg"></i></a>--%>
+                    <a class="app-nav__item" href="#" data-toggle="dropdown" aria-label="Open Profile Menu"  style="padding-bottom:0px!important; text-decoration: none; text-align:center!important;"><i class="fa fa-user fa-lg"></i><br /><span style="font-size:12px;"> <asp:Literal ID="litusername" runat="server"></asp:Literal></span></a>
+                    <ul class="dropdown-menu settings-menu dropdown-menu-right">
+                        <li><a class="dropdown-item" href="../../logout.aspx"><i class="fa fa-sign-out fa-lg"></i>Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </header>
+        <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
+        <aside class="app-sidebar" runat="server" visible="false">
+            <div class="app-sidebar__user">
+                <p class="app-sidebar__user-name">
+                   <%-- User Name-
+                    <asp:Literal ID="litusername" runat="server"></asp:Literal>--%>
+                </p>
+                <%--<p class="app-sidebar__user-designation"> Developer</p>--%>
+            </div>
+            <ul class="app-menu">
+                <li><a class="app-menu__item active" href="/homepage.aspx"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">Dashboard</span></a></li>
+
+                <li><a class="app-menu__item" href="Default.aspx"><i class="fa fa-sign-out fa-lg"></i><span class="app-menu__label">New Park</span></a></li>
+                <li><a class="app-menu__item" href="ParkList.aspx"><i class="fa fa-sign-out fa-lg"></i><span class="app-menu__label">Park List</span></a></li>
+                <li><a class="app-menu__item" href="add-sub.aspx"><i class="fa fa-sign-out fa-lg"></i><span class="app-menu__label">Add/Remove More</span></a></li>
+                <li><a class="app-menu__item" href="logout.aspx"><i class="fa fa-sign-out fa-lg"></i><span class="app-menu__label">Logout</span></a></li>
+            </ul>
+        </aside>
+        <main class="app-content" style="margin-left:0px">
+               <div class="row">
+                      <div class="col-md-4">
+                          </div>
+                      <div class="col-md-4">
+                        <%--   <h1>Login ID-
+                    <asp:Literal ID="litusername" runat="server"></asp:Literal></h1>--%>
+                          </div>
+                     <div class="col-md-4">
+                         </div>
+                    </div>
+            <br />
+               <script src="../../css/usercss/js/jquery-3.3.1.min.js"></script>
+               <script src="../../css/usercss/js/popper.min.js"></script>
+               <script src="../../css/usercss/js/bootstrap.min.js"></script>
+               <script src="../../css/usercss/js/main.js"></script>
+               <script src="../../css/usercss/js/plugins/pace.min.js"></script>
+               <script type="text/javascript" src="../../css/usercss/js/plugins/chart.js"></script>
+            <div class="row">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </main>
+        <style>
+            @media(max-width:300px) {
+                .app-content {
+                    width: 300px;
+                }
+                .btn btn-info menu{
+                     width: 428px;height: 78px;font-size: 35px;margin-left: 223px;
+                }
+}
+        </style>
+    </form>
+</body>
+</html>
+
+
