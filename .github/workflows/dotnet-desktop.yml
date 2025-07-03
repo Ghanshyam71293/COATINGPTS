@@ -30,14 +30,14 @@ jobs:
 
       - name: Deploy to IIS with msdeploy
         shell: pwsh
-        env:
-          IIS_SERVER: ${{ secrets.IIS_SERVER }}
-          IIS_USERNAME: ${{ secrets.IIS_USERNAME }}
-          IIS_PASSWORD: ${{ secrets.IIS_PASSWORD }}
-          IIS_SITE_NAME: ${{ secrets.IIS_SITE_NAME }}
         run: |
           & "C:\Program Files\IIS\Microsoft Web Deploy V3\msdeploy.exe" `
-            -source:contentPath="publish" `
-            -dest:iisApp=$env:IIS_SITE_NAME,ComputerName="https://$env:IIS_SERVER:8172/msdeploy.axd?site=$env:IIS_SITE_NAME",UserName=$env:IIS_USERNAME,Password=$env:IIS_PASSWORD,AuthType="Basic" `
+            -source:package=".\publish\PTSCOATING.zip" `
+            -dest:iisApp="$env:IIS_SITE_NAME",ComputerName="https://$env:IIS_SERVER:8172/msdeploy.axd?site=$env:IIS_SITE_NAME",UserName="$env:IIS_USERNAME",Password="$env:IIS_PASSWORD",AuthType="Basic" `
             -verb:sync `
             -allowUntrusted
+        env:
+          IIS_SITE_NAME: 'YourSiteName'
+          IIS_SERVER: 'your.server.com'
+          IIS_USERNAME: 'your-username'
+          IIS_PASSWORD: ${{ secrets.IIS_PASSWORD }}
