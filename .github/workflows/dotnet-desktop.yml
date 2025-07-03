@@ -11,7 +11,7 @@ jobs:
     env:
       SOLUTION_FILE: PTSCOATING.sln
       PROJECT_FILE: PTSCOATING.csproj
-      PUBLISH_DIR: ${{ github.workspace }}\\publish
+      PUBLISH_DIR: E:\COATINGPTS\publish
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -26,13 +26,13 @@ jobs:
         run: msbuild $env:SOLUTION_FILE /p:Configuration=Release
 
       - name: Publish web project
-        run: msbuild $env:PROJECT_FILE /p:DeployOnBuild=true /p:Configuration=Release /p:PublishDir=E:\COATINGPTS\publish
+        run: msbuild $env:PROJECT_FILE /p:DeployOnBuild=true /p:Configuration=Release /p:PublishDir=${{ env.PUBLISH_DIR }}
 
       - name: Deploy to IIS via Web Deploy
         run: |
           & "C:\Program Files\IIS\Microsoft Web Deploy V3\msdeploy.exe" `
             -verb:sync `
-            -source:contentPath=E:\COATINGPTS\publish `
+            -source:contentPath="${{ env.PUBLISH_DIR }}" `
             -dest:iisApp="${{ secrets.IIS_SITE_NAME }}",ComputerName="https://${{ secrets.IIS_SERVER }}:8172/msdeploy.axd?site=${{ secrets.IIS_SITE_NAME }}",UserName="${{ secrets.IIS_USERNAME }}",Password="${{ secrets.IIS_PASSWORD }}",AuthType=Basic `
             -allowUntrusted
         env:
