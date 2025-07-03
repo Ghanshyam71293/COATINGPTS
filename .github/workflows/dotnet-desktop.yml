@@ -31,11 +31,13 @@ jobs:
       - name: Deploy to IIS with msdeploy
         shell: pwsh
         run: |
-          & "C:\Program Files\IIS\Microsoft Web Deploy V3\msdeploy.exe" `
-          -source:contentPath="$env:PUBLISH_DIR" `
-          msdeploy -verb:sync -source:contentPath="$env:PUBLISH_DIR" -dest:iisApp=$env:IIS_SITE_NAME,ComputerName="https://$env:IIS_SERVER:8172/msdeploy.axd?site=$env:IIS_SITE_NAME",UserName="$env:IIS_USERNAME",Password="$env:IIS_PASSWORD",AuthType=Basic -allowUntrusted
+           & "C:\Program Files\IIS\Microsoft Web Deploy V3\msdeploy.exe" `
+            -verb:sync `
+            -source:contentPath="$env:PUBLISH_DIR" `
+            -dest:iisApp="$env:IIS_SITE_NAME",ComputerName="https://$env:IIS_SERVER:8172/msdeploy.axd?site=$env:IIS_SITE_NAME",UserName="$env:IIS_USERNAME",Password="$env:IIS_PASSWORD",AuthType=Basic `
+            -allowUntrusted
         env:
-          IIS_SITE_NAME: ${{ secrets.IIS_SITE_NAME }}
+          IIS_SITE_NAME: E:\a\COATINGPTS\COATINGPTS\publish
           IIS_SERVER: ${{ secrets.IIS_SERVER }}
           IIS_USERNAME: ${{ secrets.IIS_USERNAME }}
           IIS_PASSWORD: ${{ secrets.IIS_PASSWORD }}
