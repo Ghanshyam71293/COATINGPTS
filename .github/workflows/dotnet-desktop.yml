@@ -37,7 +37,7 @@ jobs:
           -verb:sync `
           -allowUntrusted
         env:
-          IIS_SITE_NAME: 'YourSiteName'
-          IIS_SERVER: 'your.server.com'
-          IIS_USERNAME: 'your-username'
+          IIS_SITE_NAME: ${{ secrets.IIS_SITE_NAME }}
+          IIS_SERVER: ${{ secrets.IIS_SERVER }}
+          IIS_USERNAME: ${{ secrets.IIS_USERNAME }}
           IIS_PASSWORD: ${{ secrets.IIS_PASSWORD }}
