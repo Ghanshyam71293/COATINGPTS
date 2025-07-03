@@ -34,7 +34,7 @@ jobs:
            & "C:\Program Files\IIS\Microsoft Web Deploy V3\msdeploy.exe" `
             -verb:sync `
             -source:contentPath="$env:PUBLISH_DIR" `
-            -dest:iisApp="$env:IIS_SITE_NAME",ComputerName="https://$env:IIS_SERVER:8172/msdeploy.axd?site=$env:IIS_SITE_NAME",UserName="$env:IIS_USERNAME",Password="$env:IIS_PASSWORD",AuthType=Basic `
+            -dest:iisApp=$env:IIS_SITE_NAME,ComputerName="https://$env:IIS_SERVER:8172/msdeploy.axd?site=$env:IIS_SITE_NAME",UserName="$env:IIS_USERNAME",Password="$env:IIS_PASSWORD",AuthType=Basic `
             -allowUntrusted
         env:
           IIS_SITE_NAME: E:\a\COATINGPTS\COATINGPTS\publish
