@@ -27,7 +27,7 @@ jobs:
 
       - name: Publish web project
         run: |
-          msbuild $env:PROJECT_FILE /p:DeployOnBuild=true /p:Configuration=Release /p:PublishDir=${{ env.PUBLISH_DIR }} /t:WebPublish
+          msbuild $env:PROJECT_FILE /p:DeployOnBuild=true /p:Configuration=Release /p:PublishDir=${{ env.PUBLISH_DIR }} /t:Publish
           if (!(Test-Path -Path $env:PUBLISH_DIR)) { Write-Error "Publish directory not found: $env:PUBLISH_DIR"; exit 1 }
         
       - name: Deploy to IIS via Web Deploy
