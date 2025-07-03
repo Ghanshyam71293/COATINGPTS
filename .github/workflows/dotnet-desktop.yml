@@ -11,7 +11,7 @@ jobs:
     env:
       SOLUTION_FILE: PTSCOATING.sln
       PROJECT_FILE: PTSCOATING.csproj
-      PUBLISH_DIR: E:\a\COATINGPTS\COATINGPTS\publish
+      PUBLISH_DIR: ${{ github.workspace }}\publish
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -25,19 +25,18 @@ jobs:
       - name: Build solution
         run: msbuild $env:SOLUTION_FILE /p:Configuration=Release
 
-      - name: Publish
-        run: msbuild PTSCOATING.csproj /p:Configuration=Release /p:DeployOnBuild=true /p:WebPublishMethod=FileSystem /p:PublishUrl=publish
+      - name: Publish web project
+        run: msbuild $env:PROJECT_FILE /p:DeployOnBuild=true /p:PublishProfile=FolderProfile /p:Configuration=Release /p:PublishDir=${{ env.PUBLISH_DIR }}
 
-      - name: Deploy to IIS with msdeploy
-        shell: pwsh
+      - name: Deploy to IIS via Web Deploy
         run: |
-           & "C:\Program Files\IIS\Microsoft Web Deploy V3\msdeploy.exe" `
+          & "C:\Program Files\IIS\Microsoft Web Deploy V3\msdeploy.exe" `
             -verb:sync `
-            -source:contentPath="$env:PUBLISH_DIR" `
-            -dest:iisApp=$env:IIS_SITE_NAME,ComputerName="https://$env:IIS_SERVER:8172/msdeploy.axd?site=$env:IIS_SITE_NAME",UserName="$env:IIS_USERNAME",Password="$env:IIS_PASSWORD",AuthType=Basic `
+            -source:contentPath="${{ env.PUBLISH_DIR }}" `
+            -dest:iisApp="${{ secrets.IIS_SITE_NAME }}",ComputerName="https://${{ secrets.IIS_SERVER }}:8172/msdeploy.axd?site=${{ secrets.IIS_SITE_NAME }}",UserName="${{ secrets.IIS_USERNAME }}",Password="${{ secrets.IIS_PASSWORD }}",AuthType=Basic `
             -allowUntrusted
         env:
-          IIS_SITE_NAME: E:\a\COATINGPTS\COATINGPTS\publish
           IIS_SERVER: ${{ secrets.IIS_SERVER }}
+          IIS_SITE_NAME: ${{ secrets.IIS_SITE_NAME }}
           IIS_USERNAME: ${{ secrets.IIS_USERNAME }}
           IIS_PASSWORD: ${{ secrets.IIS_PASSWORD }}
