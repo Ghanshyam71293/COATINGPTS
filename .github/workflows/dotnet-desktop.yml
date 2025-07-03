@@ -31,9 +31,13 @@ jobs:
       - name: Deploy to IIS using Web Deploy
         shell: pwsh
         run: |
-          & "C:\Program Files\IIS\Microsoft Web Deploy V3\msdeploy.exe" -verb:sync -source:contentPath='publish' -dest:iisApp="$env:IIS_SITE_NAME",computerName="https://$env:IIS_SERVER:8172/msdeploy.axd",userName="$env:IIS_USERNAME",password="$env:IIS_PASSWORD",authType="Basic" -allowUntrusted
+          & 'C:\Program Files\IIS\Microsoft Web Deploy V3\msdeploy.exe' `
+            -source:contentPath="$(Build.ArtifactStagingDirectory)/publish" `
+            -dest:iisApp="$env:IIS_SITE_NAME",computerName="https://$env:IIS_SERVER:8172/msdeploy.axd",userName="$env:IIS_USERNAME",password="$env:IIS_PASSWORD",authType="Basic" `
+            -verb:sync `
+            -allowUntrusted
         env:
-          IIS_SERVER: ${{ secrets.IIS_SERVER }}
           IIS_SITE_NAME: ${{ secrets.IIS_SITE_NAME }}
+          IIS_SERVER: ${{ secrets.IIS_SERVER }}
           IIS_USERNAME: ${{ secrets.IIS_USERNAME }}
           IIS_PASSWORD: ${{ secrets.IIS_PASSWORD }}
