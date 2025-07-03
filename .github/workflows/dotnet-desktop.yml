@@ -28,16 +28,16 @@ jobs:
       - name: Publish
         run: msbuild PTSCOATING.csproj /p:Configuration=Release /p:DeployOnBuild=true /p:WebPublishMethod=FileSystem /p:PublishUrl=publish
 
-      - name: Deploy to IIS
+      - name: Deploy to IIS using msdeploy
         shell: pwsh
         run: |
-          & 'C:\Program Files\IIS\Microsoft Web Deploy V3\msdeploy.exe' `
-            -source:contentPath="publish" `
-            -dest:iisApp=$env:IIS_SITE_NAME,ComputerName="https://$env:IIS_SERVER:8172/msdeploy.axd?site=$env:IIS_SITE_NAME",UserName=$env:IIS_USERNAME,Password=$env:IIS_PASSWORD,AuthType=Basic `
+          & "C:\Program Files\IIS\Microsoft Web Deploy V3\msdeploy.exe" `
+            -source:contentPath="$(System.DefaultWorkingDirectory)\publish" `
+            -dest:iisApp=$env:IIS_SITE_NAME,ComputerName="https://$env:IIS_SERVER:8172/msdeploy.axd?site=$env:IIS_SITE_NAME",UserName=$env:IIS_USERNAME,Password=$env:IIS_PASSWORD,AuthType="Basic" `
             -verb:sync `
             -allowUntrusted
         env:
-          IIS_SERVER: ${{ secrets.IIS_SERVER }}
           IIS_SITE_NAME: ${{ secrets.IIS_SITE_NAME }}
+          IIS_SERVER: ${{ secrets.IIS_SERVER }}
           IIS_USERNAME: ${{ secrets.IIS_USERNAME }}
           IIS_PASSWORD: ${{ secrets.IIS_PASSWORD }}
