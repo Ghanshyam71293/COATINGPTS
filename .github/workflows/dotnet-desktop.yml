@@ -26,7 +26,7 @@ jobs:
         run: msbuild $env:SOLUTION_FILE /p:Configuration=Release
 
       - name: Publish web project
-        run: msbuild $env:PROJECT_FILE /p:DeployOnBuild=true /p:Configuration=Release /p:PublishDir=${{ env.PUBLISH_DIR }}
+        run: msbuild $env:PROJECT_FILE /p:DeployOnBuild=true /p:PublishProfile=FolderProfile /p:Configuration=Release /p:PublishDir=${{ env.PUBLISH_DIR }}
 
       - name: Deploy to IIS via Web Deploy
         run: |
