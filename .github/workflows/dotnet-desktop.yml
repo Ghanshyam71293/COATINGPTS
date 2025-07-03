@@ -11,7 +11,7 @@ jobs:
     env:
       SOLUTION_FILE: PTSCOATING.sln
       PROJECT_FILE: PTSCOATING.csproj
-      PUBLISH_DIR: ${{ github.workspace }}\publish
+      PUBLISH_DIR: ${{ github.workspace }}\\publish
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
