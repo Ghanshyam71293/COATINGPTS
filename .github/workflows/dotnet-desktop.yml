@@ -11,7 +11,7 @@ jobs:
     env:
       SOLUTION_FILE: PTSCOATING.sln
       PROJECT_FILE: PTSCOATING.csproj
-      PUBLISH_DIR: C:\Users\purchaseapp\source\repos\PTSCOATING
+      PUBLISH_DIR: C:\inetpub\wwwroot\COATINGPTS
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
